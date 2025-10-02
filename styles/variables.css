@@ -1,6 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: 'Inter-Variable';
+  --main-font: 'Inter-Variable', sans-serif;
   --accent-font: 'PressStart2P';
   --text-color: #000;
   --font-size: 18px;
@@ -13,5 +13,7 @@
   --card-inline-size: clamp(375px, 260.56px + 30.52vw, 700px);
   --border: 2px solid #000000;
   --stroke-color: #FFFFFF;
-
+  --contour: #000;
+  --heart-body-color: transparent;
+  --sparks-color: #ff0000;
 }

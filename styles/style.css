@@ -53,6 +53,13 @@
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
 
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .card {
   border: var(--border);
   background-color: #fff;
@@ -106,5 +113,92 @@
   border: none;
 }
 
+.button {
+  font-family: var(--accent-font);
+  border: var(--border);
+  font-size: 14px;
+  font-weight: var(--card-text-weight);
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  align-self: end;
+  justify-self: end;
+  align-items: center;
+  margin-bottom: 21px;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+  margin-right: 25px;
+  margin-bottom: 4px;
+}
+
+.diskette__button {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 15px 18px;
+  gap: 8px;
+}
+
+dialog[open] {
+  display: grid;
+  padding: 30px 40px;
+  max-inline-size: 353px;
+}
 
 
+.dialog__text {
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.dialog__floppy {
+  padding-top: 12px;
+}
+
+.diskette__button__close {
+  grid-column: span 2;
+  margin-top: 30px;
+  padding: 12.5px 0;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.clear__code {
+  filter: sepia(0.4) grayscale(0.6) contrast(78%);
+}
+
+.hacker {
+  filter: saturate(5);
+}
+
+.loading {
+  filter: contrast(1) brightness(0.9) hue-rotate(30deg); 
+}
+
+.programmer {
+  filter: contrast(1.1) brightness(0.9) invert(0.8);
+}
+
+.dvd {
+  filter: sepia(1);
+}
+
+.blocknote{
+  filter: blur(0.3rem);
+}
+
+.here {
+  filter: hue-rotate(304deg) blur(1px) brightness(65%);
+}
