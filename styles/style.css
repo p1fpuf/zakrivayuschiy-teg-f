@@ -108,25 +108,30 @@
 		-1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
 }
 
-@supports (text-stroke: 1px var(--stroke-color)) {
+@supports (text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color)){
+
 	.card__label {
 		text-stroke: 1px var(--stroke-color);
+		-webkit-text-stroke: 1px var(--stroke-color);
+		text-shadow: none;
 	}
 }
 
 .card__icon-button {
-	border: none;
+	display: flex;
 	background: none;
-	width: 38px;
+	border: 2px solid transparent;
+	transition: border 0.3s ease;
 	height: 38px;
-	margin-inline: 7px;
+	padding: 0;
+}
+
+.card__icon-button:focus {
+	outline: none;
 }
 
 .card__icon-button:focus-visible {
-	outline: var(--border);
-	outline-offset: -2px;
-	transition: outline 0.3s ease;
-	padding: 0;
+	border-color: #000;
 }
 
 .button {
@@ -138,13 +143,15 @@
 	color: #fff;
 	overflow: hidden;
 	background-color: #fff;
+	transition: box-shadow 0.3s ease;
 }
 
 .buttons {
 	display: flex;
-	align-self: end;
 	justify-self: end;
 	margin-bottom: 21px;
+	align-items: flex-start;
+	gap: 7px;
 }
 
 .card__like-button {
@@ -178,8 +185,8 @@ dialog[open] {
 	line-height: 150%;
 }
 
-.dialog__floppy {
-	padding-top: 12px;
+.dialog__window {
+	padding: 12px 20px 12px 0;
 }
 
 .floppy {
@@ -196,7 +203,7 @@ dialog[open] {
 }
 
 dialog::backdrop {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.75);
 }
 
 .clear__code {
@@ -231,10 +238,12 @@ dialog::backdrop {
 	cursor: pointer;
 }
 
-.button:focus-visible {
+.button:focus {
 	outline: none;
+}
+
+.button:focus-visible {
 	box-shadow: 2px 2px 0 #000;
-	transition: box-shadow 0.3 ease;
 }
 
 .button::before {
@@ -339,5 +348,15 @@ dialog::backdrop {
 
 	dialog {
 		max-inline-size: 341px;
+	}
+
+	.floppy {
+		width: 28px;
+		height: 28px;
+	}
+
+	dialog[open] .floppy {
+		width: 39px;
+		height: 39px;
 	}
 }
