@@ -11,336 +11,333 @@
 */
 
 .page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-color, #000);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wght" var(--card-text-weight);
-  background-image: var(--bg-image-gradient);
-  background-size: cover;
-  background-attachment: fixed;
-  font-size: var(--font-size, 18px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--text-color, #000);
+	min-inline-size: 320px;
+	min-block-size: 100dvb;
+	font-family: var(--main-font, sans-serif);
+	font-variation-settings: 'wght' var(--card-text-weight);
+	background-image: var(--bg-image-gradient);
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: var(--font-size, 18px);
 }
 
 .card__width {
-  max-inline-size: 100%;
-  inline-size: var(--card-inline-size);
+	max-inline-size: 100%;
+	inline-size: var(--card-inline-size);
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--accent-font, sans-serif);
-  border: var(--border);
-  margin: 100px auto;
-  background-color: #fff;
-  block-size: clamp(327px, 30vw, 368px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--accent-font, sans-serif);
+	border: var(--border);
+	margin: 100px auto;
+	background-color: #fff;
+	block-size: clamp(327px, 30vw, 368px);
 }
 
 .header__title {
-  padding-bottom: 20px;
-  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+	padding-bottom: 20px;
+	font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
 }
 
 .header__subtitle {
-  text-transform: uppercase;
-  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+	text-transform: uppercase;
+	font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
 
-
 .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }
 
 .card {
-  border: var(--border);
-  background-color: #fff;
+	border: var(--border);
+	background-color: #fff;
 }
 
 .card__title {
-  font-variation-settings: "wght" var(--card-title-weight);
-  font-size: var(--font-size, 18px);
-  padding: 4px 10px;
-  line-height: 22px;
+	font-variation-settings: 'wght' var(--card-title-weight);
+	font-size: var(--font-size, 18px);
+	padding: 4px 10px;
+	line-height: 22px;
 }
 
 .card__textbox {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding: 21px 25px 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	padding: 21px 25px 25px;
 }
 
 .card__text {
-  line-height: 21px;
+	line-height: 21px;
 }
 
 .card__picture {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  object-position: center;
-  background-position: center;
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	object-position: center;
+	background-position: center;
 }
 
 .image__box {
-  position: relative;
-  width: 100%;
-  block-size: clamp(371px, 50vw, 696px)
+	position: relative;
+	width: 100%;
+	block-size: clamp(371px, 50vw, 696px);
 }
 
 .card__label {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  opacity: 0.5;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  mix-blend-mode: hard-light;
-  text-shadow: -1px -1px var(--stroke-color), 1px -1px var(--stroke-color), -1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	opacity: 0.5;
+	font-family: var(--accent-font);
+	font-size: 14px;
+	mix-blend-mode: hard-light;
+	text-shadow: -1px -1px var(--stroke-color), 1px -1px var(--stroke-color),
+		-1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
 }
 
-@supports(text-stroke: 1px var(--stroke-color)) {
-  .card__label {
-    text-stroke: 1px var(--stroke-color);
-  }
+@supports (text-stroke: 1px var(--stroke-color)) {
+	.card__label {
+		text-stroke: 1px var(--stroke-color);
+	}
 }
 
 .card__icon-button {
-  border: none;
-  background: none;
-  width: 38px;
-  height: 38px;
-  margin-inline: 7px;
+	border: none;
+	background: none;
+	width: 38px;
+	height: 38px;
+	margin-inline: 7px;
 }
 
 .card__icon-button:focus-visible {
-  outline: var(--border);
-  outline-offset: -2px;
-  transition: outline 0.3s ease;
-  padding: 0;
+	outline: var(--border);
+	outline-offset: -2px;
+	transition: outline 0.3s ease;
+	padding: 0;
 }
 
 .button {
-  font-family: var(--accent-font);
-  border: var(--border);
-  font-size: 14px;
-  font-weight: var(--card-text-weight);
-  position: relative;
-  color: #fff;
-  overflow: hidden;
-  background-color: #fff;
+	font-family: var(--accent-font);
+	border: var(--border);
+	font-size: 14px;
+	font-weight: var(--card-text-weight);
+	position: relative;
+	color: #fff;
+	overflow: hidden;
+	background-color: #fff;
 }
 
 .buttons {
-  display: flex;
-  align-self: end;
-  justify-self: end;
-  margin-bottom: 21px;
+	display: flex;
+	align-self: end;
+	justify-self: end;
+	margin-bottom: 21px;
 }
 
 .card__like-button {
-  inline-size: 130px;
-  block-size: 38px;
-  margin-right: 25px;
-  margin-bottom: 4px;
+	inline-size: 130px;
+	block-size: 38px;
+	margin-right: 25px;
+	margin-bottom: 4px;
 }
 
 .diskette__button {
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  padding: 15px 18px;
-  gap: 8px;
+	display: flex;
+	flex-direction: row;
+	justify-self: center;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	padding: 15px 18px;
+	gap: 8px;
 }
 
 dialog[open] {
-  display: grid;
-  padding: 30px 40px;
-  max-inline-size: 353px;
+	display: grid;
+	padding: 30px 40px;
+	max-inline-size: 353px;
 }
 
-
 .dialog__text {
-  font-family: var(--accent-font);
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 150%;
+	font-family: var(--accent-font);
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 150%;
 }
 
 .dialog__floppy {
-  padding-top: 12px;
+	padding-top: 12px;
 }
 
-
 .floppy {
-  fill: currentColor;
-  color: #fff;
-  mix-blend-mode: difference;
-  z-index: 2;
+	fill: currentColor;
+	color: #fff;
+	mix-blend-mode: difference;
+	z-index: 2;
 }
 
 .diskette__button__close {
-  grid-column: span 2;
-  margin-top: 30px;
-  padding: 12.5px 0;
+	grid-column: span 2;
+	margin-top: 30px;
+	padding: 12.5px 0;
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .clear__code {
-  filter: sepia(0.4) grayscale(0.6) contrast(78%);
+	filter: sepia(0.4) grayscale(0.6) contrast(78%);
 }
 
 .hacker {
-  filter: saturate(5);
+	filter: saturate(5);
 }
 
 .loading {
-  filter: contrast(1) brightness(0.9) hue-rotate(30deg); 
+	filter: contrast(1) brightness(0.9) hue-rotate(30deg);
 }
 
 .programmer {
-  filter: contrast(1.1) brightness(0.9) invert(0.8);
+	filter: contrast(1.1) brightness(0.9) invert(0.8);
 }
 
 .dvd {
-  filter: sepia(1);
+	filter: sepia(1);
 }
 
-.blocknote{
-  filter: blur(0.3rem);
+.blocknote {
+	filter: blur(0.3rem);
 }
 
 .world {
-  filter: hue-rotate(304deg) blur(1px) brightness(65%);
+	filter: hue-rotate(304deg) blur(1px) brightness(65%);
 }
 
 .button:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0 #000;
-  transition: box-shadow 0.3 ease;
+	outline: none;
+	box-shadow: 2px 2px 0 #000;
+	transition: box-shadow 0.3 ease;
 }
 
 .button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-  z-index: 1;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	transform: translateX(-100%);
+	transition: transform 0.5s ease-in-out;
+	z-index: 1;
 }
 
 .button:hover::before {
-  transform: translateX(0);
+	transform: translateX(0);
 }
 
 .button__text {
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: difference;
+	position: relative;
+	z-index: 2;
+	mix-blend-mode: difference;
 }
 
 .heart__sparks {
-  opacity: 0;
+	opacity: 0;
 }
 
 .heart__contour {
-  transition: fill 0.1s linear;
+	transition: fill 0.1s linear;
 }
 
 .heart__body {
-  transition: fill 0.3s linear;
+	transition: fill 0.3s linear;
 }
 
 .heart__core {
-  transition: fill 0.3s linear;
-  transition-delay: 0.03s;
+	transition: fill 0.3s linear;
+	transition-delay: 0.03s;
 }
 
-
 .like-icon:hover .heart__body {
-  transition: fill 0.3s linear;
-  fill: var(--contour);
-  transition-delay: 0.05s;
+	transition: fill 0.3s linear;
+	fill: var(--contour);
+	transition-delay: 0.05s;
 }
 
 .like-icon:hover .heart__core {
-  transition: fill 0.3s linear;
-  fill: var(--contour);
-  transition-delay: 0s;
+	transition: fill 0.3s linear;
+	fill: var(--contour);
+	transition-delay: 0s;
 }
 
 .like-icon:active .heart__body {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear;
-  transition-delay: 0.05s;
+	fill: var(--sparks-color);
+	transition: fill 0.3s linear;
+	transition-delay: 0.05s;
 }
 
 .like-icon:active .heart__core {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear;
-  transition-delay: 0s;
+	fill: var(--sparks-color);
+	transition: fill 0.3s linear;
+	transition-delay: 0s;
 }
 
 .like-icon.is-liked .heart__body {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear;
-  transition-delay: 0.05s;
+	fill: var(--sparks-color);
+	transition: fill 0.3s linear;
+	transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .heart__core {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear;
+	fill: var(--sparks-color);
+	transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .heart__contour {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear;
-  transition-delay: 0.06s;
+	fill: var(--sparks-color);
+	transition: fill 0.3s linear;
+	transition-delay: 0.06s;
 }
 
 .like-icon.is-liked .heart {
-  fill: var(--sparks-color);
-  animation: heart-scale 0.3s ease-in;
-  animation-delay: 0.1s;
-  animation-iteration-count: 1;
-  transform-origin: center;
+	fill: var(--sparks-color);
+	animation: heart-scale 0.3s ease-in;
+	animation-delay: 0.1s;
+	animation-iteration-count: 1;
+	transform-origin: center;
 }
 
 .like-icon.is-liked .heart__sparks {
-  animation: sparks-opacity 0.3s ease-in;
-  animation-delay: 0.3s;
-  animation-iteration-count: 1;
+	animation: sparks-opacity 0.3s ease-in;
+	animation-delay: 0.3s;
+	animation-iteration-count: 1;
 }
 
-@media(max-width: 376px) {
-  .diskette__button {
-    flex-direction: column;
-  }
+@media (max-width: 376px) {
+	.diskette__button {
+		flex-direction: column;
+	}
 
-  dialog {
-    max-inline-size: 341px;
-  }
+	dialog {
+		max-inline-size: 341px;
+	}
 }
