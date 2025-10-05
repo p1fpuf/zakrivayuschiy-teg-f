@@ -108,8 +108,8 @@
 		-1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
 }
 
-@supports (text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color)){
-
+@supports (text-stroke: 1px var(--stroke-color)) or
+	(-webkit-text-stroke: 1px var(--stroke-color)) {
 	.card__label {
 		text-stroke: 1px var(--stroke-color);
 		-webkit-text-stroke: 1px var(--stroke-color);
